@@ -1,14 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_update_all_gpas
--- Purpose  : Recalculate the GPA of every student that has graded courses.
--- Concepts : BULK COLLECT into a nested table, nested table + associative
---            array, user-defined exception mapped with PRAGMA EXCEPTION_INIT,
---            FORALL ... SAVE EXCEPTIONS, SQL%ROWCOUNT, bulk-error logging.
--- Behaviour: Students without graded courses are skipped (counted, not failed).
--- Errors   : -20014 some rows failed in FORALL
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_update_all_gpas (
   p_updated OUT NUMBER,
   p_skipped OUT NUMBER
