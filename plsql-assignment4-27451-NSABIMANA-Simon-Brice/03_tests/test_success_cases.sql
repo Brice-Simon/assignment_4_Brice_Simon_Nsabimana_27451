@@ -1,10 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- File : 03_tests/test_success_cases.sql
--- Run  : AFTER schema, sample data, functions and procedures are installed.
--- Order: Run the whole file top to bottom (tests build on each other).
--- Tip  : Take one screenshot per test (S1 ... S13) into /screenshots.
--- =====================================================================
+
 SET SERVEROUTPUT ON SIZE UNLIMITED
 SET LINESIZE 150
 SET PAGESIZE 100
