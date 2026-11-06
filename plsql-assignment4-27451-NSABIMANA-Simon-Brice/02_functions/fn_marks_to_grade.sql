@@ -1,10 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Function: fn_marks_to_grade
--- Purpose : Convert numeric marks (0-100) into a letter grade.
--- Errors  : ORA-20010 when marks are NULL or outside 0..100
---           (an invalid mark is never silently turned into a grade).
--- =====================================================================
+
 CREATE OR REPLACE FUNCTION fn_marks_to_grade (
   p_marks IN NUMBER
 ) RETURN VARCHAR2
