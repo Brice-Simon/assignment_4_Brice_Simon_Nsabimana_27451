@@ -1,10 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Function: fn_available_seats
--- Purpose : Seats still free in a course for a given semester.
--- Errors  : ORA-20003 course does not exist
--- Usage   : SELECT course_code, fn_available_seats(course_id, '2026-B') FROM courses;
--- =====================================================================
+
 CREATE OR REPLACE FUNCTION fn_available_seats (
   p_course_id IN courses.course_id%TYPE,
   p_semester  IN enrollments.semester%TYPE
