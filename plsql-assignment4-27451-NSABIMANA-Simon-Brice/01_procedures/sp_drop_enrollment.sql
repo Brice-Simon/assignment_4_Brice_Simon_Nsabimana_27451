@@ -1,13 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_drop_enrollment
--- Purpose  : Remove an enrollment that has NOT been graded yet.
--- Concepts : %ROWTYPE record, implicit cursor DELETE with SQL%ROWCOUNT /
---            SQL%FOUND / SQL%NOTFOUND, NO_DATA_FOUND, user-defined exception.
--- Errors   : -20006 enrollment not found
---            -20007 enrollment already graded (history must be kept)
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_drop_enrollment (
   p_enrollment_id IN  enrollments.enrollment_id%TYPE,
   p_rows_deleted  OUT NUMBER
