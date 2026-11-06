@@ -1,12 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_record_grade
--- Purpose  : Record marks for ONE enrollment and derive the letter grade.
--- Concepts : implicit cursor UPDATE with SQL%FOUND, SQL%NOTFOUND, SQL%ROWCOUNT,
---            OUT parameter, user-defined exception, function call.
--- Errors   : -20006 enrollment not found   -20008 invalid marks
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_record_grade (
   p_enrollment_id IN  enrollments.enrollment_id%TYPE,
   p_marks         IN  enrollments.marks%TYPE,
