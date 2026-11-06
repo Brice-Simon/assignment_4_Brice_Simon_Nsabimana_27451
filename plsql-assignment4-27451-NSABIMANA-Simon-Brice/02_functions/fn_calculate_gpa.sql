@@ -1,12 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Function: fn_calculate_gpa
--- Purpose : Credit-weighted GPA of a student over all graded enrollments.
--- Concepts: explicit cursor with a parameter + cursor FOR loop,
---           user-defined exceptions mapped with PRAGMA EXCEPTION_INIT.
--- Errors  : ORA-20001 student does not exist
---           ORA-20020 student has no graded courses (no fake 0.00 GPA)
--- =====================================================================
+
 CREATE OR REPLACE FUNCTION fn_calculate_gpa (
   p_student_id IN students.student_id%TYPE
 ) RETURN NUMBER
