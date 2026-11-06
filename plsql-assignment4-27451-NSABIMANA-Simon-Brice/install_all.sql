@@ -1,12 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- install_all.sql  (optional helper)
--- Run from the ROOT folder of the repository, e.g. in SQL*Plus / SQLcl:
---     @install_all.sql
--- It runs the project files in dependency order:
---   schema -> sample data -> functions -> sp_log_error -> other procedures
--- (Procedures call functions and sp_log_error, so those are compiled first.)
--- =====================================================================
+
 @00_schema/01_create_tables.sql
 @00_schema/02_insert_sample_data.sql
 
