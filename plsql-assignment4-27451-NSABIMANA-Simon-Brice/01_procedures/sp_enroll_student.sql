@@ -1,17 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_enroll_student
--- Purpose  : Enrol an ACTIVE student in a course for a semester,
---            respecting the course capacity.
--- Concepts : %ROWTYPE records, user-defined record, implicit cursor (INSERT
---            with SQL%ROWCOUNT), user-defined exceptions, predefined
---            exceptions (NO_DATA_FOUND, DUP_VAL_ON_INDEX), RAISE_APPLICATION_ERROR,
---            OUT parameter, error logging for unexpected errors.
--- Errors   : -20001 student missing   -20002 student not ACTIVE
---            -20003 course missing    -20004 course full
---            -20005 already enrolled  -20009 missing input
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_enroll_student (
   p_student_id    IN  students.student_id%TYPE,
   p_course_id     IN  courses.course_id%TYPE,
