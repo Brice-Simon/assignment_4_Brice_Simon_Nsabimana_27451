@@ -1,4 +1,3 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
 -- =====================================================================
 -- Assignment IV - University Registration & Grading System
 -- File   : 00_schema/01_create_tables.sql
