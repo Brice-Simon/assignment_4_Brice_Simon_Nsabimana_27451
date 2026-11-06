@@ -1,12 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_log_error
--- Purpose  : Write an unexpected error into ERROR_LOG.
--- Concepts : PRAGMA AUTONOMOUS_TRANSACTION - the log row is committed on its
---            own, so it survives even if the caller rolls back.
--- Note     : If logging itself fails, the problem is printed but NOT raised,
---            so it can never hide the original error the caller re-raises.
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_log_error (
   p_source  IN VARCHAR2,
   p_code    IN NUMBER,
