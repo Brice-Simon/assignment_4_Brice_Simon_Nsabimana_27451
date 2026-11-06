@@ -1,12 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Function: fn_find_student_by_last_name
--- Purpose : Return the student_id for a last name that must be unique.
--- Concepts: predefined exceptions NO_DATA_FOUND and TOO_MANY_ROWS,
---           translated into meaningful application errors.
--- Errors  : ORA-20040 more than one student has this last name
---           ORA-20041 no student has this last name
--- =====================================================================
+
 CREATE OR REPLACE FUNCTION fn_find_student_by_last_name (
   p_last_name IN students.last_name%TYPE
 ) RETURN students.student_id%TYPE
