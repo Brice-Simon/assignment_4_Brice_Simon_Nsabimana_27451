@@ -1,15 +1,3 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_apply_bonus_marks
--- Purpose  : Add bonus marks (capped at 100) to every graded student of a
---            course in a semester, and refresh their letter grades.
--- Concepts : BULK COLLECT into nested tables (collections), collection methods
---            (COUNT, EXTEND), FORALL with SAVE EXCEPTIONS,
---            SQL%ROWCOUNT after FORALL, ORA-24381 handling.
--- Errors   : -20003 course missing   -20012 bonus outside 1..20
---            -20013 no graded enrollments   -20014 some rows failed in FORALL
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
 CREATE OR REPLACE PROCEDURE sp_apply_bonus_marks (
   p_course_id    IN  courses.course_id%TYPE,
   p_semester     IN  enrollments.semester%TYPE,
