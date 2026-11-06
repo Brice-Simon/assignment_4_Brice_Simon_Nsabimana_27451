@@ -1,18 +1,3 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_bulk_grade_upload
--- Purpose  : Upload many marks at once (e.g. a lecturer's marks sheet).
---            Input  : two parallel lists (enrollment ids and marks).
--- Concepts : SQL nested table parameters (t_number_tab), associative arrays,
---            FORALL ... SAVE EXCEPTIONS, SQL%BULK_EXCEPTIONS,
---            SQL%BULK_ROWCOUNT, PRAGMA EXCEPTION_INIT (ORA-24381),
---            autonomous error logging.
--- Behaviour: Good rows are updated, bad rows are reported and logged, and the
---            procedure returns the counts. Nothing is committed here - the
---            caller decides whether to COMMIT or ROLLBACK.
--- Errors   : -20009 invalid input lists (NULL / empty / different sizes)
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
 CREATE OR REPLACE PROCEDURE sp_bulk_grade_upload (
   p_enrollment_ids IN  t_number_tab,
   p_marks          IN  t_number_tab,
