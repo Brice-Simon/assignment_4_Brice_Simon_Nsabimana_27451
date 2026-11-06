@@ -1,12 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_department_summary
--- Purpose  : List the students of a department with status and GPA.
--- Concepts : explicit cursor with a parameter used in a cursor FOR loop,
---            %ROWTYPE record (departments), NO_DATA_FOUND, OUT parameter.
--- Errors   : -20016 department missing
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_department_summary (
   p_dept_id       IN  departments.dept_id%TYPE,
   p_student_count OUT NUMBER
