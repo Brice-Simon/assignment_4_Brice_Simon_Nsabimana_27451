@@ -1,3 +1,0 @@
-Project owner: NSABIMANA Simon Brice
-Student ID: 27451
-Assignment: Assignment IV – Advanced Oracle PL/SQL
