@@ -1,13 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_update_student_gpa
--- Purpose  : Calculate one student's GPA and store it in STUDENTS.GPA.
--- Concepts : function call, implicit cursor UPDATE (SQL%ROWCOUNT),
---            OUT parameter, error pass-through.
--- Errors   : -20001 student missing  -20020 no graded courses
---            (both raised by fn_calculate_gpa and passed through)
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_update_student_gpa (
   p_student_id IN  students.student_id%TYPE,
   p_gpa        OUT students.gpa%TYPE
