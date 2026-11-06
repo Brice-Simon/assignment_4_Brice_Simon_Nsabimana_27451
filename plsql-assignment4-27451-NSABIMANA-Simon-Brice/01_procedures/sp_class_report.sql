@@ -1,14 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_class_report
--- Purpose  : Print the roster, class average and grade distribution of a
---            course in a semester.
--- Concepts : explicit cursor with parameters (OPEN / FETCH / CLOSE),
---            %NOTFOUND, %ISOPEN, user-defined record, associative array
---            indexed by VARCHAR2 (grade -> count), %ROWTYPE.
--- Errors   : -20003 course missing   -20015 no enrollments for the semester
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_class_report (
   p_course_id IN courses.course_id%TYPE,
   p_semester  IN enrollments.semester%TYPE
