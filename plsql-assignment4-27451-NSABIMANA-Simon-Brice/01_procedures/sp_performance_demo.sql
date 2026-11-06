@@ -1,14 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- Procedure: sp_performance_demo
--- Purpose  : Compare row-by-row INSERT (one SQL call per row) with FORALL
---            (one SQL call for all rows) on the scratch table PERF_DEMO.
--- Concepts : associative arrays, FORALL, DBMS_UTILITY.GET_TIME (1/100 s),
---            PRAGMA AUTONOMOUS_TRANSACTION so the caller's transaction is
---            never touched by this experiment.
--- Errors   : -20017 p_rows outside 1..1000000
---            -20099 unexpected error (also written to ERROR_LOG)
--- =====================================================================
+
 CREATE OR REPLACE PROCEDURE sp_performance_demo (
   p_rows           IN  PLS_INTEGER,
   p_rowbyrow_cs    OUT NUMBER,     -- centiseconds
