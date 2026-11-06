@@ -1,10 +1,4 @@
--- Owner  : NSABIMANA Simon Brice | Student ID: 27451
--- =====================================================================
--- File : 03_tests/test_error_cases.sql
--- Run  : AFTER the success tests. Every block is EXPECTED to fail and the
---        output shows the expected code next to the actual one.
--- Tip  : Take one screenshot per test (E1 ... E19) into /screenshots.
--- =====================================================================
+
 SET SERVEROUTPUT ON SIZE UNLIMITED
 SET LINESIZE 170
 SET PAGESIZE 100
